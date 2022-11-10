@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.healthteam14.droncall.ui.activities.FirebaseAuthUIActivity
+import com.healthteam14.droncall.ui.activities.SecondRegStepActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -17,6 +18,7 @@ class SplashActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, FirebaseAuthUIActivity::class.java)
+          //  val intent = Intent(this, SecondRegStepActivity::class.java)
             startActivity(intent)
             finish()
         }, splashTimeOut)

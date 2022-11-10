@@ -2,7 +2,6 @@ package com.healthteam14.droncall.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.AuthUI.IdpConfig.PhoneBuilder
@@ -21,36 +20,37 @@ class FirebaseAuthUIActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+
+
         if (FirebaseAuth.getInstance().currentUser != null) {
             val intent = Intent(this@FirebaseAuthUIActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
         } else {
-            val signInLauncher = registerForActivityResult(
-                FirebaseAuthUIActivityResultContract()
-            ) { result -> onSignInResult(result) }
+            val signInLauncher =
+                registerForActivityResult(FirebaseAuthUIActivityResultContract()) { result ->
+                    onSignInResult(result)
+                }
 
-            val providers = listOf(
-                PhoneBuilder().build()
-            )
+            val providers = listOf(PhoneBuilder().build())
 
-            val signInIntent = AuthUI.getInstance()
-                .createSignInIntentBuilder()
-                .setAvailableProviders(providers)
-                .build()
+            val signInIntent =
+                AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(providers)
+                    .build()
             signInLauncher.launch(signInIntent)
         }
     }
 
     private fun onSignInResult(result: FirebaseAuthUIAuthenticationResult) {
-        val response = result.idpResponse
+
         if (result.resultCode == RESULT_OK) {
             val userMetadata = FirebaseAuth.getInstance().currentUser?.metadata
 
             if (userMetadata != null) {
                 if (userMetadata.creationTimestamp == userMetadata.lastSignInTimestamp) {
                     val userKey: String = FirebaseUtils.firebaseUser?.uid.toString()
-                    saveUserDetails(userKey)
+                    val userPhone: String? =  FirebaseAuth.getInstance().currentUser?.phoneNumber
+                    navToNextStep(userKey,userPhone)
                 } else {
                     val intent = Intent(this@FirebaseAuthUIActivity, MainActivity::class.java)
                     startActivity(intent)
@@ -63,17 +63,17 @@ class FirebaseAuthUIActivity : AppCompatActivity() {
         }
     }
 
-    private fun saveUserDetails(userKey: String) {
-
-    }
-
-    private fun showMsg(msg: String) {
-        val toast = Toast.makeText(this@FirebaseAuthUIActivity, msg, Toast.LENGTH_LONG)
-        toast.show()
+    private fun navToNextStep(id: String,phoneNumber: String?) {
+        val intent = Intent(this@FirebaseAuthUIActivity, SecondRegStepActivity::class.java)
+        intent.putExtra(UserKey, id)
+        intent.putExtra(UserPhone, phoneNumber)
+        startActivity(intent)
+        finish()
     }
 
     companion object {
-        const val defaultUserRole: String = "Patient"
-        private const val TAG = "FirebaseAuthUIActivity"
+        const val UserKey: String = "UserKey"
+        const val UserPhone: String = "Phone"
     }
+
 }
