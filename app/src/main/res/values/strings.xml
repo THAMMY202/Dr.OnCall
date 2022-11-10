@@ -3,4 +3,12 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="firstname">Firstname *</string>
+    <string name="surname">Surname *</string>
+    <string name="email">Email</string>
+    <string name="select_date_of_birth">Date of birth</string>
+    <string name="your_details">Your details</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="sex_at_birth">Sex at birth</string>
 </resources>

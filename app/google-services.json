@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1067835232162",
+    "project_id": "dr-oncall-2eff5",
+    "storage_bucket": "dr-oncall-2eff5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067835232162:android:9256617e6168bb2f6d2cfb",
+        "android_client_info": {
+          "package_name": "com.healthteam14.droncall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067835232162-a0rov9rdlgfn5urfhdqv762coef4ajvc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.healthteam14.droncall",
+            "certificate_hash": "75237687ce33046c9cb2fd32ae27348f4e117ad5"
+          }
+        },
+        {
+          "client_id": "1067835232162-rqgu9p1ni509kq2ij816gvg91u6ose6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9Cw-MhHW_Ahu2SPwHfpZJpp318LLyeco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067835232162-rqgu9p1ni509kq2ij816gvg91u6ose6f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
