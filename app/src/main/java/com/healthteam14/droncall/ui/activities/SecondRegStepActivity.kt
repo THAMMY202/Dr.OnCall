@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.google.firebase.database.FirebaseDatabase
-import com.healthteam14.droncall.MainActivity
 import com.healthteam14.droncall.R
 import com.healthteam14.droncall.models.User
 import com.healthteam14.droncall.utils.FirebaseUtils
@@ -102,7 +101,7 @@ class SecondRegStepActivity : AppCompatActivity() {
         FirebaseUtils.database = FirebaseDatabase.getInstance().reference.child("Users")
         FirebaseUtils.database.child(user.key).setValue(user)
             .addOnSuccessListener {
-                val intent = Intent(this@SecondRegStepActivity, MainActivity::class.java)
+                val intent = Intent(this@SecondRegStepActivity, PatientMainActivity::class.java)
                 startActivity(intent)
                 finish()
             }

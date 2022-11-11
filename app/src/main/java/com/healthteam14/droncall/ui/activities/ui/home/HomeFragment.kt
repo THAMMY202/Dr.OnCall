@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.healthteam14.droncall.databinding.FragmentHomeBinding
 
-
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null

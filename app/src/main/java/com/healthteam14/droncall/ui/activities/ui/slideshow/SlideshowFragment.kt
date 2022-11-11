@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.healthteam14.droncall.databinding.FragmentSlideshowBinding
 
+
 class SlideshowFragment : Fragment() {
 
     private var _binding: FragmentSlideshowBinding? = null

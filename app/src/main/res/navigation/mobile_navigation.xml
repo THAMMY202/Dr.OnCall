@@ -3,23 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/nav_home">
+
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.healthteam14.droncall.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:id="@+id/nav_home"
+        android:name="com.healthteam14.droncall.ui.activities.ui.home.HomeFragment"
+        android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.healthteam14.droncall.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/nav_sos"
+        android:name="com.healthteam14.droncall.ui.activities.sos.EmergenceFragment"
+        android:label="@string/menu_sos"
+        tools:layout="@layout/fragment_emergence" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.healthteam14.droncall.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/nav_hosp"
+        android:name="com.healthteam14.droncall.ui.activities.hospitals.HospitalsFragment"
+        android:label="@string/menu_hospital"
+        tools:layout="@layout/fragment_hospitals" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.healthteam14.droncall.ui.activities.about.AboutUsFragment"
+        android:label="@string/about_us"
+        tools:layout="@layout/fragment_about_us" />
 </navigation>

@@ -8,7 +8,6 @@ import com.firebase.ui.auth.AuthUI.IdpConfig.PhoneBuilder
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.FirebaseAuth
-import com.healthteam14.droncall.MainActivity
 import com.healthteam14.droncall.databinding.ActivityAuthUiBinding
 import com.healthteam14.droncall.utils.FirebaseUtils
 
