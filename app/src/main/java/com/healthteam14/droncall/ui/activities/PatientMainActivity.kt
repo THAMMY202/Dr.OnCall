@@ -1,7 +1,10 @@
 package com.healthteam14.droncall.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -11,6 +14,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.healthteam14.droncall.R
 import com.healthteam14.droncall.databinding.ActivityPatientMainBinding
 
@@ -44,8 +48,37 @@ class PatientMainActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_signOut -> {
+                AlertDialog.Builder(this).apply {
+                    setTitle("Please confirm")
+                    setMessage("Are you sure you want to Sign out?")
+
+                    setPositiveButton("Yes") { _, _ ->
+                        signOut()
+                    }
+
+                    setNegativeButton("No") { _, _ ->
+                    }
+
+                    setCancelable(true)
+                }.create().show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_patient_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    private fun signOut() {
+        FirebaseAuth.getInstance().signOut()
+        val intent = Intent(this, FirebaseAuthUIActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
