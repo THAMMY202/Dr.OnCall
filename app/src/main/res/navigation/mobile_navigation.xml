@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.healthteam14.droncall.ui.activities.ui.home.HomeFragment"
+        android:name="com.healthteam14.droncall.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 

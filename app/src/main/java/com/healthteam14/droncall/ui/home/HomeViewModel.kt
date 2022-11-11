@@ -1,4 +1,4 @@
-package com.healthteam14.droncall.ui.activities.ui.home
+package com.healthteam14.droncall.ui.home
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

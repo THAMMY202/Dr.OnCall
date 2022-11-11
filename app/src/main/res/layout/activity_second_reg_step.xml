@@ -146,9 +146,13 @@
         android:id="@+id/btnSignUp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:text="Next"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_width="369dp"
+        android:layout_height="71dp"
+        android:background="@drawable/btn_shape_capsule"
+        android:elevation="10dp"
+        android:fontFamily="sans-serif"
+        android:text="SIGN UP"
+        android:textColor="#FFFFFF"/>
 
 
 </RelativeLayout>
