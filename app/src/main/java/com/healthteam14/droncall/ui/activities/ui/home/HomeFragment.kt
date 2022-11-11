@@ -1,4 +1,4 @@
-package com.healthteam14.droncall.ui.home
+package com.healthteam14.droncall.ui.activities.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.healthteam14.droncall.databinding.FragmentHomeBinding
+
 
 class HomeFragment : Fragment() {
 
@@ -20,7 +21,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         val homeViewModel =
             ViewModelProvider(this).get(HomeViewModel::class.java)

@@ -23,7 +23,8 @@ class FirebaseAuthUIActivity : AppCompatActivity() {
 
 
         if (FirebaseAuth.getInstance().currentUser != null) {
-            val intent = Intent(this@FirebaseAuthUIActivity, MainActivity::class.java)
+            //val intent = Intent(this@FirebaseAuthUIActivity, MainActivity::class.java)
+            val intent = Intent(this@FirebaseAuthUIActivity, PatientMainActivity::class.java)
             startActivity(intent)
             finish()
         } else {
@@ -52,7 +53,8 @@ class FirebaseAuthUIActivity : AppCompatActivity() {
                     val userPhone: String? =  FirebaseAuth.getInstance().currentUser?.phoneNumber
                     navToNextStep(userKey,userPhone)
                 } else {
-                    val intent = Intent(this@FirebaseAuthUIActivity, MainActivity::class.java)
+                    //val intent = Intent(this@FirebaseAuthUIActivity, MainActivity::class.java)
+                    val intent = Intent(this@FirebaseAuthUIActivity, PatientMainActivity::class.java)
                     startActivity(intent)
                     finish()
                 }
