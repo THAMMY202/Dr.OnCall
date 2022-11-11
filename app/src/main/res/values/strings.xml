@@ -31,4 +31,5 @@
     <string name="title_activity_patient_main2">PatientMainActivity2</string>
     <string name="title_activity_hospital_maps">HospitalMapsActivity</string>
     <string name="menu_hospital">Hospitals</string>
+    <string name="sign_out">Sign out</string>
 </resources>
