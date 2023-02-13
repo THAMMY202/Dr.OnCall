@@ -19,10 +19,7 @@ class FirebaseAuthUIActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-
-
         if (FirebaseAuth.getInstance().currentUser != null) {
-            //val intent = Intent(this@FirebaseAuthUIActivity, MainActivity::class.java)
             val intent = Intent(this@FirebaseAuthUIActivity, PatientMainActivity::class.java)
             startActivity(intent)
             finish()

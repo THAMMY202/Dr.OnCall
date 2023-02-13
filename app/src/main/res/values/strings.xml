@@ -34,6 +34,9 @@
     <string name="sign_out">Sign out</string>
     <string name="enter_your_symptoms">Enter Your Symptoms !</string>
     <string name="know_your_disease">KNOW YOUR DISEASE</string>
+    <string name="app_version">Version 1.1.0 beta</string>
+    <string name="app_about_slogan">Dr.OnCall helps you and your loved ones check symptoms and discover what might be causing them – day or night without an appointment. Whatever bothering you, from stomach problems to headache, Dr.OnCall free symptom checker can help you find answers.</string>
+    <string name="enter_symptom">ENTER SYMPTOM</string>
 
     <string-array name="symptom_list">
         <item>SELECT SYMPTOM</item>
